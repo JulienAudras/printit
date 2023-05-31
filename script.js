@@ -96,7 +96,12 @@ function dots(){
 		console.log("trouver id : ", dot);
 		if (i==0){
 			dots.children[i].classList.add('dot_selected');
-		}
+		}	
+		dot.addEventListener('click', function(){
+		currentSlide = i;
+		Update(currentSlide);
+		selected();
+})
 		// else{
 		// 	dots.children[i].classList.remove('dot_selected');
 		// }
@@ -174,34 +179,40 @@ arrowRight.addEventListener('click', function() {
 // const dotClasses = dot.classList;
 // console.log (dotClasses);
 
-const dotOne = document.getElementById("1");
-dotOne.addEventListener('click', function(){
-	currentSlide = 0;
-	Update(currentSlide);
-	selected();
-})
+// const dotOne = document.getElementById("1");
+// dotOne.addEventListener('click', function(){
+// 	currentSlide = 0;
+// 	Update(currentSlide);
+// 	selected();
+// })
 
-const dotTwo = document.getElementById("2");
-dotTwo.addEventListener('click', function(){
-	currentSlide = 1;
-	Update(currentSlide);
-	selected();
-})
+// const dotTwo = document.getElementById("2");
+// dotTwo.addEventListener('click', function(){
+// 	currentSlide = 1;
+// 	Update(currentSlide);
+// 	selected();
+// })
 
-const dotThree = document.getElementById("3");
-dotThree.addEventListener('click', function(){
-	currentSlide = 2;
-	Update(currentSlide);
-	selected();
-})
+// const dotThree = document.getElementById("3");
+// dotThree.addEventListener('click', function(){
+// 	currentSlide = 2;
+// 	Update(currentSlide);
+// 	selected();
+// })
 
-const dotFour = document.getElementById("4");
-dotFour.addEventListener('click', function(){
-	currentSlide = 3;
-	Update(currentSlide);
-	selected();
-})
+// const dotFour = document.getElementById("4");
+// dotFour.addEventListener('click', function(){
+// 	currentSlide = 3;
+// 	Update(currentSlide);
+// 	selected();
+// })
 
+
+// En cas de fonction asynchrone essayer plutot cette boucle pour targetter id
+// dot.addEventListener("click", function (e) {
+// 	currentSlide = e.target.id;
+// 	update(currentSlide);
+//   });
 
 
 
